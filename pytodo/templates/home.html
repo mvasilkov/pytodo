@@ -4,7 +4,8 @@
 <p>^_^</p>
 <ul>
 	{% for task in task_list %}
-	<li>{{ task.name }} ({{ task.date_added|date:"Y-m-d" }})</li>
+	<li>{{ task.name }} ({{ task.date_added|date:"Y-m-d" }})
+		<a href="{% url del_task task.id %}">delete</a></li>
 	{% empty %}
 	<li><em>Nothing here.</em></li>
 	{% endfor %}
