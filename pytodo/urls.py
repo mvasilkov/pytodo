@@ -5,5 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('pytodo.main.views',
     url(r'^$', 'home', name='home'),
+    url(r'^task/new/$', 'new_task', name='new_task'),
     url(r'^admin/', include(admin.site.urls)),
 )
