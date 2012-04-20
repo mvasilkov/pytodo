@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+
+class Task(models.Model):
+    name = models.CharField(max_length=200)
+    text = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+    is_done = models.BooleanField()
+
+    def __unicode__(self):
+        return self.name
