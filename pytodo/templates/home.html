@@ -2,4 +2,11 @@
 
 {% block main %}
 <p>^_^</p>
+<ul>
+	{% for task in task_list %}
+	<li>{{ task.name }} ({{ task.date_added|date:"Y-m-d" }})</li>
+	{% empty %}
+	<li><em>Nothing here.</em></li>
+	{% endfor %}
+</ul>
 {% endblock %}
