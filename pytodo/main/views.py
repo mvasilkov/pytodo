@@ -4,7 +4,7 @@ from pytodo.main.models import Task
 
 
 def home(request):
-    return render(request, 'home.html', {'task_list': Task.objects.all()})
+    return render(request, 'home.html', {'task_list': Task.objects.filter(parent=None)})
 
 
 def new_task(request):
